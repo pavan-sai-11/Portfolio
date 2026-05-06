@@ -22,77 +22,12 @@ html {
 }
 
 body {
-    background-color: transparent;
+    background-color: var(--black);
     color: var(--beige);
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
     line-height: 1.6;
     overflow-x: hidden;
-}
-
-/* LIVE BACKGROUND */
-.live-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -2;
-    overflow: hidden;
-    background-color: var(--black);
-}
-
-.glow-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.5;
-    animation: floatOrb 20s infinite ease-in-out alternate;
-}
-
-.orb-1 {
-    width: 400px;
-    height: 400px;
-    background: var(--accent);
-    top: -100px;
-    left: -100px;
-    animation-delay: 0s;
-}
-
-.orb-2 {
-    width: 500px;
-    height: 500px;
-    background: #FF3B3B;
-    bottom: -150px;
-    right: -100px;
-    animation-delay: -5s;
-    animation-duration: 25s;
-}
-
-.orb-3 {
-    width: 300px;
-    height: 300px;
-    background: #FFA500;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation-delay: -10s;
-    animation-duration: 30s;
-}
-
-@keyframes floatOrb {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-    33% {
-        transform: translate(30px, -50px) scale(1.1);
-    }
-    66% {
-        transform: translate(-20px, 20px) scale(0.9);
-    }
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
 }
 
 /* TYPOGRAPHY */
@@ -308,8 +243,7 @@ section { padding: 120px 0; }
 
 /* CARDS */
 .bordered-card {
-    background: rgba(17, 17, 17, 0.6);
-    backdrop-filter: blur(12px);
+    background: var(--dark-gray);
     border: var(--border-accent);
     padding: 40px;
 }
@@ -407,8 +341,7 @@ section { padding: 120px 0; }
 
 /* CONTACT */
 .contact-box {
-    background: rgba(17, 17, 17, 0.6);
-    backdrop-filter: blur(12px);
+    background: var(--dark-gray);
     padding: 80px;
     border: var(--border-accent);
 }
